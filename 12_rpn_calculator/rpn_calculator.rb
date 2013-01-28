@@ -1,7 +1,7 @@
 class RPNCalculator
   attr_accessor :stack
   def initialize()
-    self.stack=[]
+    self.stack = []
   end
 
   def value
@@ -46,8 +46,7 @@ class RPNCalculator
       else x.to_f
       end
     end
-   
-  end
+   end
 
   def evaluate(str)
     tokens(str).each do |x|
@@ -72,23 +71,19 @@ class RPNCalculator
   def operation(op)
     raise "calculator is empty" unless self.stack.size >= 2
 
-      a=self.stack.pop
-      b=self.stack.pop
+      a = self.stack.pop
+      b = self.stack.pop
       case op
       when :+
-          res=a+b
+          res = a + b
       when :-
-          res=a-b
+          res = a - b
       when :/
-          res=a/b
+          res = a / b
       when :*
-        res=a*b
-
+        res = a * b
       end
       self.stack.push res
-
-    
   end
-
-
+  
 end
