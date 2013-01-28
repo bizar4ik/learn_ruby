@@ -1,22 +1,22 @@
-def add(add1,add2)
-	add1+add2
+def add(add1, add2)
+	add1 + add2
 end
 
 
-def subtract(add1,add2)
-	add1-add2
+def subtract(add1, add2)
+	add1 - add2
 end
 
 def sum(arr)
-	arr.inject(0){|result,elem| result=result+elem}
+	arr.inject(0){|result, elem| result += elem}
 end
 
 def mult(arr)
-	arr.inject(1){|result,elem| result=result*elem}
+	arr.inject(1){|result, elem| result *= elem}
 end
 
-def power(add1,add2)
-	add1**add2
+def power(add1, add2)
+	add1 ** add2
 end
 
 
