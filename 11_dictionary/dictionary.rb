@@ -1,8 +1,7 @@
 class Dictionary
 
-  def initialize(hash={})
-    @hash=hash
-
+  def initialize(hash = {})
+    @hash = hash
   end
 
   def entries
@@ -12,19 +11,17 @@ class Dictionary
 
 
   def add(str)
-  if str.class == String
-  @hash[str] = nil
-  else
-  str.class == Hash
-  @hash.merge!(str)
-
-  end
-
+    if str.class == String
+      @hash[str] = nil
+    else
+      str.class == Hash
+      @hash.merge!(str)
+    end
   end
 
   def keywords
-    keys=[]
-    @hash.each do |key,val|
+    keys = []
+    @hash.each do |key, val|
       keys.push key
     end
     keys.sort
@@ -35,32 +32,18 @@ class Dictionary
   end
 
   def find(str)
-    res={}
+    res = {}
       @hash.each do |key,val|
-        if key[0..1]==str[0..1]
-          res.merge! key=>val
-
-        end
+       res.merge! key => val if key[0..1] == str[0..1]
       end
       res
-
-
   end
 
   def printable
-    res=[]
-
+    res = []
     @hash.sort.each do |key,val|
-
       res.push "[#{key}] \"#{val}\""
-
     end
-res.join("\n")
-
+   res.join("\n")
   end
-
-
-
-
-
 end
