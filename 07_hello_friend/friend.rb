@@ -5,9 +5,6 @@ class Friend
 			"Hello!"
 			else
 			"Hello, #{name}!"
-
 		end
-
 	end
-
 end
