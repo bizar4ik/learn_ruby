@@ -1,19 +1,12 @@
 class Array
 
-
 def sum
-self.inject(0){|sum,num|sum+=num}
-
+  self.inject(0){|sum, num| sum += num}
 end
 
 
 def square
-  if self.empty?
-    self
-  else
-    self.map{|num| num**2}
-  end
-
+  self.map{|num| num**2}
 end
 
 def square!
